@@ -20,3 +20,7 @@ dynamic = ["version"]
 
 [project.scripts]
 ifc2json = "ifc2json:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ifc2json*"]
