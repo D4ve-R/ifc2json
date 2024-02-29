@@ -1,8 +1,8 @@
 import json
-import ifcjson
+import ifc2json
 
 def json2ifc(jsonFilePath, ifcFilePath):
-    ifc_json = ifcjson.JSON2IFC(jsonFilePath)
+    ifc_json = ifc2json.JSON2IFC(jsonFilePath)
     ifc_model = ifc_json.ifcModel()
     ifc_model.write(ifcFilePath)
     return ifc_model
@@ -28,7 +28,7 @@ def ifc2json(
         GEOMETRY = True
 
     if not version or version == "4":
-        jsonData = ifcjson.IFC2JSON4(ifcFilePath,
+        jsonData = ifc2json.IFC2JSON4(ifcFilePath,
                                      compact,
                                      NO_INVERSE=no_inverse,
                                      EMPTY_PROPERTIES=empty_properties,
@@ -38,7 +38,7 @@ def ifc2json(
         with open(jsonFilePath, 'w') as outfile:
             json.dump(jsonData, outfile, indent=indent)
     elif version == "5a":
-        jsonData = ifcjson.IFC2JSON5a(ifcFilePath,
+        jsonData = ifc2json.IFC2JSON5a(ifcFilePath,
                                       compact,
                                       EMPTY_PROPERTIES=empty_properties
                                       ).spf2Json()

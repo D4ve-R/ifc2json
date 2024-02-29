@@ -6,7 +6,7 @@ import ifcopenshell
 import ifcopenshell.guid
 import ifcopenshell.template
 
-from ifcjson.reader import IFCJSON
+from ifc2json.reader import IFCJSON
 
 # Specific JSON types that need mapping
 INCLUDE_ATTRIBUTES = ['value']

@@ -29,7 +29,7 @@ import uuid
 import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.guid as guid
-import ifcjson.common as common
+import ifc2json.common as common
 from datetime import datetime
 from ifcopenshell.entity_instance import entity_instance
 

@@ -27,7 +27,7 @@
 from time import perf_counter
 import os
 import argparse
-from ifcjson.convert import ifc2json, json2ifc
+from ifc2json.convert import ifc2json, json2ifc
 
 def main():
     t1_start = perf_counter()
