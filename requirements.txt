@@ -1,0 +1,2 @@
+ifcopenshell==0.7.0.231218
+pandas==2.2.1

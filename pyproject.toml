@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ifcjson"
+description = "Convert IFC to JSON and vice versa"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["IFC", "BIM", "JSON", "converter", "aeco"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "ifcopenshell",
+    "pandas",
+]
+dynamic = ["version"]
+
+[project.scripts]
+ifc2json = "ifc2json:main"
